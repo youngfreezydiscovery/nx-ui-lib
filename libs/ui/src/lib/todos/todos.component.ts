@@ -1,5 +1,4 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { Todo } from '@myorg/data';
 
 @Component({
   selector: 'myorg-todos',

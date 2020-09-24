@@ -16,9 +16,9 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@myorg/api-interfaces": ["libs/api-interfaces/src/index.ts"],
-      "@myorg/data": ["libs/data/src/index.ts"],
-      "@myorg/ui": ["libs/ui/src/index.ts"]
+      "api-interfaces": ["libs/api-interfaces/src/index.ts"],
+      "data": ["libs/data/src/index.ts"],
+      "@jlamarr22/ui": ["libs/ui/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]
