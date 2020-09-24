@@ -1,6 +1,6 @@
 {
   "name": "myorg",
-  "version": "0.12.0",
+  "version": "0.12.1",
   "license": "MIT",
   "scripts": {
     "ng": "nx",
@@ -26,13 +26,13 @@
     "workspace-schematic": "nx workspace-schematic",
     "dep-graph": "nx dep-graph",
     "help": "nx help",
-    "copy-readme": "cp README.md ./dist/libs/ui",
-    "copy-license": "cp LICENSE ./dist/libs/ui",
+    "copy-readme": "cp README.md ./dist/libs/$npm_config_library",
+    "copy-license": "cp LICENSE ./dist/libs/$npm_config_library",
     "copy-files": "run-s copy-readme copy-license",
-    "bump-version:major": "npm version major --force && cd libs/ui && npm version major --force",
-    "bump-version:minor": "npm version minor --force && cd libs/ui && npm version minor --force",
-    "bump-version:patch": "npm version patch --force && cd libs/ui && npm version patch --force",
-    "build:lib-pack": "ng build ui && npm run copy-files && cd dist/libs/ui && npm pack",
+    "bump-version:major": "npm version major --force && cd libs/$npm_config_library && npm version major --force",
+    "bump-version:minor": "npm version minor --force && cd libs/$npm_config_library && npm version minor --force",
+    "bump-version:patch": "npm version patch --force && cd libs/$npm_config_library && npm version patch --force",
+    "build:lib-pack": "ng build $npm_config_library && npm run copy-files && cd dist/libs/$npm_config_library && npm pack",
     "pre-publish:minor": "run-s bump-version:minor build:lib-pack",
     "pre-publish:major": "run-s bump-version:major build:lib-pack",
     "pre-publish:patch": "run-s bump-version:patch build:lib-pack"
