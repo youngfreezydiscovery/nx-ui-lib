@@ -81,6 +81,12 @@ Run `nx affected:e2e` to execute the end-to-end tests affected by a change.
 
 Run `nx dep-graph` to see a diagram of the dependencies of your projects.
 
+## Deploying a library to NPM
+
+Run `npm run pre-publish:minor` to bump the package's minor version for a new release. You can also use `npm run pre-publish:patch` to add a patch release or `npm run pre-publish:major` to add a major release.
+
+Run `npm publish ./dist/libs/<lib-name>/<org-name>-<lib-name>-<version>.tgz --access public` to publish the new version to NPM.
+
 ## Further help
 
 Visit the [Nx Documentation](https://nx.dev/angular) to learn more.
