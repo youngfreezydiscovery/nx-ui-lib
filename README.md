@@ -83,9 +83,14 @@ Run `nx dep-graph` to see a diagram of the dependencies of your projects.
 
 ## Deploying a library to NPM
 
-Run `npm run pre-publish:minor` to bump the package's minor version for a new release. You can also use `npm run pre-publish:patch` to add a patch release or `npm run pre-publish:major` to add a major release.
+Run one of the following commands to build and bump the library's version for publishing: 
+```
+npm run pre-publish:patch --library=<library-name>
+npm run pre-publish:minor --library=<library-name>
+npm run pre-publish:major --library=<library-name>
+```
 
-Run `npm publish ./dist/libs/<lib-name>/<org-name>-<lib-name>-<version>.tgz --access public` to publish the new version to NPM.
+Run `npm publish ./dist/libs/<library-name>/<org-name>-<library-name>-<version>.tgz --access public` to publish the new version to NPM.
 
 ## Further help
 
