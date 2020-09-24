@@ -8,6 +8,7 @@ import { Todo } from '@myorg/data';
 })
 export class TodosComponent implements OnInit {
   // @Input() todos: Todo[];
+  @Input() value: any;
   products: { data: { id: string; code: string; name: string; description: string; image: string; price: number; category: string; quantity: number; inventoryStatus: string; rating: number; }[]; };
 
   constructor() {}
