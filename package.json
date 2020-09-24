@@ -1,6 +1,6 @@
 {
   "name": "myorg",
-  "version": "0.7.0",
+  "version": "0.8.0",
   "license": "MIT",
   "scripts": {
     "ng": "nx",
@@ -26,8 +26,8 @@
     "workspace-schematic": "nx workspace-schematic",
     "dep-graph": "nx dep-graph",
     "help": "nx help",
-    "copy-readme": "copy .\\README.md .\\dist\\libs\\ui",
-    "copy-license": "copy .\\LICENSE .\\dist\\libs\\ui",
+    "copy-readme": "cp .\\README.md .\\dist\\libs\\ui",
+    "copy-license": "cp .\\LICENSE .\\dist\\libs\\ui",
     "copy-files": "run-s copy-readme copy-license",
     "bump-version:major": "npm version major --force && cd libs/ui && npm version major --force",
     "bump-version:minor": "npm version minor --force && cd libs/ui && npm version minor --force",
