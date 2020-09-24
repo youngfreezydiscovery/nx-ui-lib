@@ -1,6 +1,6 @@
 {
   "name": "myorg",
-  "version": "0.12.1",
+  "version": "0.0.1",
   "license": "MIT",
   "scripts": {
     "ng": "nx",
@@ -29,9 +29,9 @@
     "copy-readme": "cp README.md ./dist/libs/$npm_config_library",
     "copy-license": "cp LICENSE ./dist/libs/$npm_config_library",
     "copy-files": "run-s copy-readme copy-license",
-    "bump-version:major": "npm version major --force && cd libs/$npm_config_library && npm version major --force",
-    "bump-version:minor": "npm version minor --force && cd libs/$npm_config_library && npm version minor --force",
-    "bump-version:patch": "npm version patch --force && cd libs/$npm_config_library && npm version patch --force",
+    "bump-version:major": "cd libs/$npm_config_library && npm version major --force",
+    "bump-version:minor": "cd libs/$npm_config_library && npm version minor --force",
+    "bump-version:patch": "cd libs/$npm_config_library && npm version patch --force",
     "build:lib-pack": "ng build $npm_config_library && npm run copy-files && cd dist/libs/$npm_config_library && npm pack",
     "pre-publish:minor": "run-s bump-version:minor build:lib-pack",
     "pre-publish:major": "run-s bump-version:major build:lib-pack",
